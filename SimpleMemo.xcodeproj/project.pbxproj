@@ -14,6 +14,8 @@
 		002C9974256518AB00DA1AD9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 002C9973256518AB00DA1AD9 /* Assets.xcassets */; };
 		002C9977256518AB00DA1AD9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 002C9975256518AB00DA1AD9 /* LaunchScreen.storyboard */; };
 		002C998F2565767000DA1AD9 /* Memo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002C998E2565767000DA1AD9 /* Memo.swift */; };
+		002C9992256578A500DA1AD9 /* MemoStorageType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002C9991256578A500DA1AD9 /* MemoStorageType.swift */; };
+		002C9997256579D100DA1AD9 /* MemoryStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002C9996256579D100DA1AD9 /* MemoryStorage.swift */; };
 		99E8F796EA71C41DB8C6EA73 /* Pods_SimpleMemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08A779B486B4C2479FEC2E3C /* Pods_SimpleMemo.framework */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +29,8 @@
 		002C9976256518AB00DA1AD9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		002C9978256518AB00DA1AD9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		002C998E2565767000DA1AD9 /* Memo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Memo.swift; sourceTree = "<group>"; };
+		002C9991256578A500DA1AD9 /* MemoStorageType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoStorageType.swift; sourceTree = "<group>"; };
+		002C9996256579D100DA1AD9 /* MemoryStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryStorage.swift; sourceTree = "<group>"; };
 		08A779B486B4C2479FEC2E3C /* Pods_SimpleMemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SimpleMemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCED5580C5A159A18C93FE20 /* Pods-SimpleMemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleMemo.debug.xcconfig"; path = "Target Support Files/Pods-SimpleMemo/Pods-SimpleMemo.debug.xcconfig"; sourceTree = "<group>"; };
 		D3334185ED77AA68F69E9142 /* Pods-SimpleMemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleMemo.release.xcconfig"; path = "Target Support Files/Pods-SimpleMemo/Pods-SimpleMemo.release.xcconfig"; sourceTree = "<group>"; };
@@ -74,7 +78,6 @@
 				002C9969256518A900DA1AD9 /* SceneDelegate.swift */,
 				002C9973256518AB00DA1AD9 /* Assets.xcassets */,
 				002C9978256518AB00DA1AD9 /* Info.plist */,
-				002C9970256518A900DA1AD9 /* SimpleMemo.xcdatamodeld */,
 			);
 			path = SimpleMemo;
 			sourceTree = "<group>";
@@ -106,6 +109,9 @@
 		002C998B25653DA800DA1AD9 /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				002C99952565799D00DA1AD9 /* CoreDataStorage */,
+				002C99942565798200DA1AD9 /* MemoryStorage */,
+				002C9991256578A500DA1AD9 /* MemoStorageType.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -115,6 +121,22 @@
 			children = (
 			);
 			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		002C99942565798200DA1AD9 /* MemoryStorage */ = {
+			isa = PBXGroup;
+			children = (
+				002C9996256579D100DA1AD9 /* MemoryStorage.swift */,
+			);
+			path = MemoryStorage;
+			sourceTree = "<group>";
+		};
+		002C99952565799D00DA1AD9 /* CoreDataStorage */ = {
+			isa = PBXGroup;
+			children = (
+				002C9970256518A900DA1AD9 /* SimpleMemo.xcdatamodeld */,
+			);
+			path = CoreDataStorage;
 			sourceTree = "<group>";
 		};
 		04BF3735988B84DAC09E5465 /* Pods */ = {
@@ -248,7 +270,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				002C9997256579D100DA1AD9 /* MemoryStorage.swift in Sources */,
 				002C9968256518A900DA1AD9 /* AppDelegate.swift in Sources */,
+				002C9992256578A500DA1AD9 /* MemoStorageType.swift in Sources */,
 				002C996A256518A900DA1AD9 /* SceneDelegate.swift in Sources */,
 				002C9972256518A900DA1AD9 /* SimpleMemo.xcdatamodeld in Sources */,
 				002C998F2565767000DA1AD9 /* Memo.swift in Sources */,
