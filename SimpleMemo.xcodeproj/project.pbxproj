@@ -3,17 +3,17 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		002C9968256518A900DA1AD9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002C9967256518A900DA1AD9 /* AppDelegate.swift */; };
 		002C996A256518A900DA1AD9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002C9969256518A900DA1AD9 /* SceneDelegate.swift */; };
-		002C996C256518A900DA1AD9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002C996B256518A900DA1AD9 /* ViewController.swift */; };
 		002C996F256518A900DA1AD9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 002C996D256518A900DA1AD9 /* Main.storyboard */; };
 		002C9972256518A900DA1AD9 /* SimpleMemo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 002C9970256518A900DA1AD9 /* SimpleMemo.xcdatamodeld */; };
 		002C9974256518AB00DA1AD9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 002C9973256518AB00DA1AD9 /* Assets.xcassets */; };
 		002C9977256518AB00DA1AD9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 002C9975256518AB00DA1AD9 /* LaunchScreen.storyboard */; };
+		002C998F2565767000DA1AD9 /* Memo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002C998E2565767000DA1AD9 /* Memo.swift */; };
 		99E8F796EA71C41DB8C6EA73 /* Pods_SimpleMemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08A779B486B4C2479FEC2E3C /* Pods_SimpleMemo.framework */; };
 /* End PBXBuildFile section */
 
@@ -21,12 +21,12 @@
 		002C9964256518A900DA1AD9 /* SimpleMemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleMemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		002C9967256518A900DA1AD9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		002C9969256518A900DA1AD9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		002C996B256518A900DA1AD9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		002C996E256518A900DA1AD9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		002C9971256518A900DA1AD9 /* SimpleMemo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SimpleMemo.xcdatamodel; sourceTree = "<group>"; };
 		002C9973256518AB00DA1AD9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		002C9976256518AB00DA1AD9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		002C9978256518AB00DA1AD9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		002C998E2565767000DA1AD9 /* Memo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Memo.swift; sourceTree = "<group>"; };
 		08A779B486B4C2479FEC2E3C /* Pods_SimpleMemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SimpleMemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCED5580C5A159A18C93FE20 /* Pods-SimpleMemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleMemo.debug.xcconfig"; path = "Target Support Files/Pods-SimpleMemo/Pods-SimpleMemo.debug.xcconfig"; sourceTree = "<group>"; };
 		D3334185ED77AA68F69E9142 /* Pods-SimpleMemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleMemo.release.xcconfig"; path = "Target Support Files/Pods-SimpleMemo/Pods-SimpleMemo.release.xcconfig"; sourceTree = "<group>"; };
@@ -65,16 +65,56 @@
 		002C9966256518A900DA1AD9 /* SimpleMemo */ = {
 			isa = PBXGroup;
 			children = (
+				002C998C2565751100DA1AD9 /* Coordinator */,
+				002C998B25653DA800DA1AD9 /* Service */,
+				002C998A2565384900DA1AD9 /* ViewModel */,
+				002C99892565383800DA1AD9 /* View */,
+				002C99882565381600DA1AD9 /* Model */,
 				002C9967256518A900DA1AD9 /* AppDelegate.swift */,
 				002C9969256518A900DA1AD9 /* SceneDelegate.swift */,
-				002C996B256518A900DA1AD9 /* ViewController.swift */,
-				002C996D256518A900DA1AD9 /* Main.storyboard */,
 				002C9973256518AB00DA1AD9 /* Assets.xcassets */,
-				002C9975256518AB00DA1AD9 /* LaunchScreen.storyboard */,
 				002C9978256518AB00DA1AD9 /* Info.plist */,
 				002C9970256518A900DA1AD9 /* SimpleMemo.xcdatamodeld */,
 			);
 			path = SimpleMemo;
+			sourceTree = "<group>";
+		};
+		002C99882565381600DA1AD9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				002C998E2565767000DA1AD9 /* Memo.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		002C99892565383800DA1AD9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				002C996D256518A900DA1AD9 /* Main.storyboard */,
+				002C9975256518AB00DA1AD9 /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		002C998A2565384900DA1AD9 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		002C998B25653DA800DA1AD9 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		002C998C2565751100DA1AD9 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Coordinator;
 			sourceTree = "<group>";
 		};
 		04BF3735988B84DAC09E5465 /* Pods */ = {
@@ -83,7 +123,6 @@
 				BCED5580C5A159A18C93FE20 /* Pods-SimpleMemo.debug.xcconfig */,
 				D3334185ED77AA68F69E9142 /* Pods-SimpleMemo.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -209,10 +248,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				002C996C256518A900DA1AD9 /* ViewController.swift in Sources */,
 				002C9968256518A900DA1AD9 /* AppDelegate.swift in Sources */,
 				002C996A256518A900DA1AD9 /* SceneDelegate.swift in Sources */,
 				002C9972256518A900DA1AD9 /* SimpleMemo.xcdatamodeld in Sources */,
+				002C998F2565767000DA1AD9 /* Memo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
