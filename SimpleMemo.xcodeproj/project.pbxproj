@@ -14,6 +14,7 @@
 		002C9972256518A900DA1AD9 /* SimpleMemo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 002C9970256518A900DA1AD9 /* SimpleMemo.xcdatamodeld */; };
 		002C9974256518AB00DA1AD9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 002C9973256518AB00DA1AD9 /* Assets.xcassets */; };
 		002C9977256518AB00DA1AD9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 002C9975256518AB00DA1AD9 /* LaunchScreen.storyboard */; };
+		99E8F796EA71C41DB8C6EA73 /* Pods_SimpleMemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08A779B486B4C2479FEC2E3C /* Pods_SimpleMemo.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,9 @@
 		002C9973256518AB00DA1AD9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		002C9976256518AB00DA1AD9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		002C9978256518AB00DA1AD9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		08A779B486B4C2479FEC2E3C /* Pods_SimpleMemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SimpleMemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BCED5580C5A159A18C93FE20 /* Pods-SimpleMemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleMemo.debug.xcconfig"; path = "Target Support Files/Pods-SimpleMemo/Pods-SimpleMemo.debug.xcconfig"; sourceTree = "<group>"; };
+		D3334185ED77AA68F69E9142 /* Pods-SimpleMemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleMemo.release.xcconfig"; path = "Target Support Files/Pods-SimpleMemo/Pods-SimpleMemo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				99E8F796EA71C41DB8C6EA73 /* Pods_SimpleMemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +49,8 @@
 			children = (
 				002C9966256518A900DA1AD9 /* SimpleMemo */,
 				002C9965256518A900DA1AD9 /* Products */,
+				04BF3735988B84DAC09E5465 /* Pods */,
+				9E23F76AED6230A2871C678F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -70,6 +77,24 @@
 			path = SimpleMemo;
 			sourceTree = "<group>";
 		};
+		04BF3735988B84DAC09E5465 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BCED5580C5A159A18C93FE20 /* Pods-SimpleMemo.debug.xcconfig */,
+				D3334185ED77AA68F69E9142 /* Pods-SimpleMemo.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		9E23F76AED6230A2871C678F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				08A779B486B4C2479FEC2E3C /* Pods_SimpleMemo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -77,9 +102,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 002C997B256518AB00DA1AD9 /* Build configuration list for PBXNativeTarget "SimpleMemo" */;
 			buildPhases = (
+				537D27C75AF6DA18FAE4815C /* [CP] Check Pods Manifest.lock */,
 				002C9960256518A900DA1AD9 /* Sources */,
 				002C9961256518A900DA1AD9 /* Frameworks */,
 				002C9962256518A900DA1AD9 /* Resources */,
+				298ED9D22A44C9DC201C5C2F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -134,6 +161,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		298ED9D22A44C9DC201C5C2F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SimpleMemo/Pods-SimpleMemo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SimpleMemo/Pods-SimpleMemo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SimpleMemo/Pods-SimpleMemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		537D27C75AF6DA18FAE4815C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SimpleMemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		002C9960256518A900DA1AD9 /* Sources */ = {
@@ -287,6 +356,7 @@
 		};
 		002C997C256518AB00DA1AD9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BCED5580C5A159A18C93FE20 /* Pods-SimpleMemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -299,12 +369,13 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.jaeyoungyun.SimpleMemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		002C997D256518AB00DA1AD9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D3334185ED77AA68F69E9142 /* Pods-SimpleMemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -317,7 +388,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.jaeyoungyun.SimpleMemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
