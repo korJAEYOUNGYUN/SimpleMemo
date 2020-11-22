@@ -23,6 +23,10 @@
 		002C99AE256628D900DA1AD9 /* MemoDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002C99AD256628D900DA1AD9 /* MemoDetailViewModel.swift */; };
 		002C99B1256628F100DA1AD9 /* MemoComposeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002C99B0256628F100DA1AD9 /* MemoComposeViewModel.swift */; };
 		002C99B425662A0100DA1AD9 /* ViewModelBindableType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002C99B325662A0100DA1AD9 /* ViewModelBindableType.swift */; };
+		002C99B72566507C00DA1AD9 /* TransitionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002C99B62566507C00DA1AD9 /* TransitionModel.swift */; };
+		002C99BD2566551F00DA1AD9 /* CoordinatorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002C99BC2566551F00DA1AD9 /* CoordinatorType.swift */; };
+		002C99C12566565C00DA1AD9 /* Scene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002C99C02566565C00DA1AD9 /* Scene.swift */; };
+		002C99C42566568F00DA1AD9 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002C99C32566568F00DA1AD9 /* Coordinator.swift */; };
 		99E8F796EA71C41DB8C6EA73 /* Pods_SimpleMemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08A779B486B4C2479FEC2E3C /* Pods_SimpleMemo.framework */; };
 /* End PBXBuildFile section */
 
@@ -45,6 +49,10 @@
 		002C99AD256628D900DA1AD9 /* MemoDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoDetailViewModel.swift; sourceTree = "<group>"; };
 		002C99B0256628F100DA1AD9 /* MemoComposeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoComposeViewModel.swift; sourceTree = "<group>"; };
 		002C99B325662A0100DA1AD9 /* ViewModelBindableType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelBindableType.swift; sourceTree = "<group>"; };
+		002C99B62566507C00DA1AD9 /* TransitionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitionModel.swift; sourceTree = "<group>"; };
+		002C99BC2566551F00DA1AD9 /* CoordinatorType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorType.swift; sourceTree = "<group>"; };
+		002C99C02566565C00DA1AD9 /* Scene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene.swift; sourceTree = "<group>"; };
+		002C99C32566568F00DA1AD9 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		08A779B486B4C2479FEC2E3C /* Pods_SimpleMemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SimpleMemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCED5580C5A159A18C93FE20 /* Pods-SimpleMemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleMemo.debug.xcconfig"; path = "Target Support Files/Pods-SimpleMemo/Pods-SimpleMemo.debug.xcconfig"; sourceTree = "<group>"; };
 		D3334185ED77AA68F69E9142 /* Pods-SimpleMemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleMemo.release.xcconfig"; path = "Target Support Files/Pods-SimpleMemo/Pods-SimpleMemo.release.xcconfig"; sourceTree = "<group>"; };
@@ -140,6 +148,10 @@
 		002C998C2565751100DA1AD9 /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
+				002C99B62566507C00DA1AD9 /* TransitionModel.swift */,
+				002C99BC2566551F00DA1AD9 /* CoordinatorType.swift */,
+				002C99C02566565C00DA1AD9 /* Scene.swift */,
+				002C99C32566568F00DA1AD9 /* Coordinator.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -295,12 +307,16 @@
 				002C99B1256628F100DA1AD9 /* MemoComposeViewModel.swift in Sources */,
 				002C99A52566284200DA1AD9 /* MemoDetailViewController.swift in Sources */,
 				002C99B425662A0100DA1AD9 /* ViewModelBindableType.swift in Sources */,
+				002C99C12566565C00DA1AD9 /* Scene.swift in Sources */,
 				002C9968256518A900DA1AD9 /* AppDelegate.swift in Sources */,
+				002C99BD2566551F00DA1AD9 /* CoordinatorType.swift in Sources */,
 				002C9992256578A500DA1AD9 /* MemoStorageType.swift in Sources */,
 				002C996A256518A900DA1AD9 /* SceneDelegate.swift in Sources */,
 				002C9972256518A900DA1AD9 /* SimpleMemo.xcdatamodeld in Sources */,
+				002C99C42566568F00DA1AD9 /* Coordinator.swift in Sources */,
 				002C99AB256628AF00DA1AD9 /* MemoListViewModel.swift in Sources */,
 				002C99AE256628D900DA1AD9 /* MemoDetailViewModel.swift in Sources */,
+				002C99B72566507C00DA1AD9 /* TransitionModel.swift in Sources */,
 				002C99A22566280100DA1AD9 /* MemoListViewController.swift in Sources */,
 				002C99A82566287200DA1AD9 /* MemoComposeViewController.swift in Sources */,
 				002C998F2565767000DA1AD9 /* Memo.swift in Sources */,

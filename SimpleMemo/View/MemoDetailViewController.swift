@@ -14,7 +14,6 @@ class MemoDetailViewController: UIViewController, ViewModelBindableType {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        bindViewModel()
     }
     
     func bindViewModel() {
