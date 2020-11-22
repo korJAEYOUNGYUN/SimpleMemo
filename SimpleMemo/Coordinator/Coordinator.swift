@@ -21,6 +21,7 @@ class Coordinator: CoordinatorType {
         currentVC = window.rootViewController!
     }
     
+    @discardableResult
     func transition(to scene: Scene, using style: TransitionStyle, animated: Bool) -> Completable {
         let subject = PublishSubject<Void>()
         let target = scene.instantiate()
@@ -50,6 +51,7 @@ class Coordinator: CoordinatorType {
         return subject.ignoreElements()
     }
     
+    @discardableResult
     func close(animated: Bool) -> Completable {
         return Completable.create { [unowned self] completable in
             if let presentingVC = self.currentVC.presentingViewController {

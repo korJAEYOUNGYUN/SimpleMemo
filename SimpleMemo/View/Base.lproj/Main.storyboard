@@ -21,7 +21,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-154" y="126"/>
+            <point key="canvasLocation" x="580" y="-23"/>
         </scene>
         <!--Memo List-->
         <scene sceneID="fjL-RK-cfD">
@@ -30,10 +30,47 @@
                     <view key="view" contentMode="scaleToFill" id="Iq9-eM-suN">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="r6W-RK-Hsw">
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="cell" textLabel="dQq-1g-BOq" style="IBUITableViewCellStyleDefault" id="PRy-Hi-GlE">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="PRy-Hi-GlE" id="SyC-va-pcg">
+                                            <rect key="frame" x="0.0" y="0.0" width="383" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="dQq-1g-BOq">
+                                                    <rect key="frame" x="20" y="0.0" width="355" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="nwH-AR-0mh"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="r6W-RK-Hsw" firstAttribute="leading" secondItem="nwH-AR-0mh" secondAttribute="leading" id="Iue-fr-0ht"/>
+                            <constraint firstItem="r6W-RK-Hsw" firstAttribute="top" secondItem="nwH-AR-0mh" secondAttribute="top" id="gjF-UA-PHJ"/>
+                            <constraint firstItem="nwH-AR-0mh" firstAttribute="trailing" secondItem="r6W-RK-Hsw" secondAttribute="trailing" id="kPv-6g-4Zl"/>
+                            <constraint firstAttribute="bottom" secondItem="r6W-RK-Hsw" secondAttribute="bottom" id="sVe-RA-xjS"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Memo List" id="x6R-6d-CxH"/>
+                    <navigationItem key="navigationItem" title="Memo List" id="x6R-6d-CxH">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="bAx-0s-dx3"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="addButtonItem" destination="bAx-0s-dx3" id="hr1-Et-Orw"/>
+                        <outlet property="listTableView" destination="r6W-RK-Hsw" id="a0y-fi-CmC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XZF-g6-Pb7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
