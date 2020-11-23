@@ -101,11 +101,35 @@
                     <view key="view" contentMode="scaleToFill" id="o8Q-hh-dg4">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Qsv-5x-xNz">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="aYd-d1-taY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="aYd-d1-taY" firstAttribute="bottom" secondItem="Qsv-5x-xNz" secondAttribute="bottom" id="8r5-wh-Abp"/>
+                            <constraint firstItem="Qsv-5x-xNz" firstAttribute="leading" secondItem="aYd-d1-taY" secondAttribute="leading" id="cEU-Xr-us6"/>
+                            <constraint firstItem="aYd-d1-taY" firstAttribute="trailing" secondItem="Qsv-5x-xNz" secondAttribute="trailing" id="pRi-nx-txA"/>
+                            <constraint firstItem="Qsv-5x-xNz" firstAttribute="top" secondItem="aYd-d1-taY" secondAttribute="top" id="u32-5R-6zQ"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="New Memo" id="IqS-vg-fAw"/>
+                    <navigationItem key="navigationItem" title="New Memo" id="IqS-vg-fAw">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="A6H-Mr-Tsk"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="uuh-38-TRt"/>
+                    </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="cancelButtonItem" destination="A6H-Mr-Tsk" id="jAo-wM-v9A"/>
+                        <outlet property="contentTextView" destination="Qsv-5x-xNz" id="kJy-KI-5aF"/>
+                        <outlet property="saveButtonItem" destination="uuh-38-TRt" id="cku-ta-uLV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4SB-5J-bVI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -148,6 +172,9 @@
         </scene>
     </scenes>
     <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

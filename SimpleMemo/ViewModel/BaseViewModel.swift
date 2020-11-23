@@ -15,7 +15,7 @@ class BaseViewModel {
     let coordinator: CoordinatorType
     let storage: MemoStorageType
     
-    init(title: String, coordinator: Coordinator, storage: MemoStorageType) {
+    init(title: String, coordinator: CoordinatorType, storage: MemoStorageType) {
         self.title = Observable.just(title).asDriver(onErrorJustReturn: "")
         self.coordinator = coordinator
         self.storage = storage
