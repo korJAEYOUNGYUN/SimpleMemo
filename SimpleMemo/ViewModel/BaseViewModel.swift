@@ -9,7 +9,7 @@ import Foundation
 import RxSwift
 import RxCocoa
 
-class BaseViewModel {
+class BaseViewModel: NSObject {
     
     let title: Driver<String>
     let coordinator: CoordinatorType

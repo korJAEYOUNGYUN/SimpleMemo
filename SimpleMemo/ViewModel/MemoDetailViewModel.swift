@@ -29,4 +29,26 @@ class MemoDetailViewModel: BaseViewModel {
         
         super.init(title: title, coordinator: coordinator, storage: storage)
     }
+    
+    func performUpdate(memo: Memo) -> Action<String, Void> {
+        return Action { input in
+            self.storage.update(memo: memo, content: input)
+                .subscribe(onNext: { updated in
+                    self.contents.onNext([updated.content, self.formatter.string(from: updated.createdAt)])
+                })
+                .disposed(by: self.rx.disposeBag)
+            
+            return Observable.empty()
+        }
+    }
+    
+    func makeEditAction() -> CocoaAction {
+        return CocoaAction {
+            let composeViewModel = MemoComposeViewModel(title: "Edit Memo", content: self.memo.content, coordinator: self.coordinator, storage: self.storage, saveAction: self.performUpdate(memo: self.memo))
+            
+            let composeScene = Scene.compose(composeViewModel)
+            
+            return self.coordinator.transition(to: composeScene, using: .modal, animated: true).asObservable().map { _ in }
+        }
+    }
 }
