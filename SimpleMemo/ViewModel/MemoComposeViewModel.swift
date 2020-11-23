@@ -21,7 +21,7 @@ class MemoComposeViewModel: BaseViewModel {
     let saveAction: Action<String, Void>
     let cancelAction: CocoaAction
     
-    init(title: String, content: String? = nil, coordinator: Coordinator, storage: MemoStorageType, saveAction: Action<String, Void>? = nil, cancelAction: CocoaAction? = nil) {
+    init(title: String, content: String? = nil, coordinator: CoordinatorType, storage: MemoStorageType, saveAction: Action<String, Void>? = nil, cancelAction: CocoaAction? = nil) {
         self.content = content
         self.saveAction = Action { input in
             if let action = saveAction {
