@@ -60,5 +60,7 @@ class MemoDetailViewController: UIViewController, ViewModelBindableType {
             
             return Observable.empty()
         }
+        
+        deleteButtonItem.rx.action = viewModel.makeDeleteAction()
     }
 }

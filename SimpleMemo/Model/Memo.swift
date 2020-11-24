@@ -6,17 +6,18 @@
 //
 
 import Foundation
+import RxDataSources
 
-struct Memo: Equatable {
+struct Memo: Equatable, IdentifiableType {
     
     var content: String
     var createdAt: Date
-    var id: String
+    var identity: String
     
     init(content: String, createdAt: Date = Date()) {
         self.content = content
         self.createdAt = createdAt
-        self.id = UUID().uuidString
+        self.identity = UUID().uuidString
     }
     
     init(original: Memo, updatedContent: String) {

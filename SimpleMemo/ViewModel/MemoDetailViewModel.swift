@@ -51,4 +51,11 @@ class MemoDetailViewModel: BaseViewModel {
             return self.coordinator.transition(to: composeScene, using: .modal, animated: true).asObservable().map { _ in }
         }
     }
+    
+    func makeDeleteAction() -> CocoaAction {
+        return CocoaAction {
+            self.storage.delete(memo: self.memo)
+            return self.coordinator.close(animated: true).asObservable().map { _ in }
+        }
+    }
 }

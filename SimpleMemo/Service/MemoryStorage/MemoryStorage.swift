@@ -17,40 +17,42 @@ class MemoryStorage: MemoStorageType {
         Memo(content: "doing something", createdAt: Date().addingTimeInterval(-40)),
     ]
     
-    private lazy var store = BehaviorSubject<[Memo]>(value: list)
+    private lazy var sectionModel = MemoSectionModel(model: 0, items: list)
+    
+    private lazy var store = BehaviorSubject<[MemoSectionModel]>(value: [sectionModel])
 
     func createMemo(content: String) -> Observable<Memo> {
         let memo = Memo(content: content)
-        list.insert(memo, at: 0)
+        sectionModel.items.insert(memo, at: 0)
         
-        store.onNext(list)
+        store.onNext([sectionModel])
         
         return Observable.just(memo)
     }
     
-    func memoList() -> Observable<[Memo]> {
+    func memoList() -> Observable<[MemoSectionModel]> {
         return store
     }
     
     func update(memo: Memo, content: String) -> Observable<Memo> {
         let updated = Memo(original: memo, updatedContent: content)
         
-        if let index = list.firstIndex(where: { $0 == memo }) {
-            list.remove(at: index)
-            list.insert(updated, at: index)
+        if let index = sectionModel.items.firstIndex(where: { $0 == memo }) {
+            sectionModel.items.remove(at: index)
+            sectionModel.items.insert(updated, at: index)
         }
         
-        store.onNext(list)
+        store.onNext([sectionModel])
         
         return Observable.just(updated)
     }
     
     func delete(memo: Memo) -> Observable<Memo> {
-        if let index = list.firstIndex(where: { $0 == memo }) {
-            list.remove(at: index)
+        if let index = sectionModel.items.firstIndex(where: { $0 == memo }) {
+            sectionModel.items.remove(at: index)
         }
         
-        store.onNext(list)
+        store.onNext([sectionModel])
         
         return Observable.just(memo)
     }

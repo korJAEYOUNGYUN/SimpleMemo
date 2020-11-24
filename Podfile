@@ -10,4 +10,5 @@ target 'SimpleMemo' do
   pod 'RxCocoa'
   pod 'Action'
   pod 'NSObject+Rx'
+  pod 'RxDataSources'
 end
