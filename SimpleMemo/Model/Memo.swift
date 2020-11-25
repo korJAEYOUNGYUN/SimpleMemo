@@ -6,7 +6,9 @@
 //
 
 import Foundation
+import CoreData
 import RxDataSources
+import RxCoreData
 
 struct Memo: Equatable, IdentifiableType {
     
@@ -23,5 +25,34 @@ struct Memo: Equatable, IdentifiableType {
     init(original: Memo, updatedContent: String) {
         self = original
         self.content = updatedContent
+    }
+}
+
+extension Memo: Persistable {
+    
+    public static var entityName: String {
+        return "Memo"
+    }
+    
+    static var primaryAttributeName: String {
+        return "identity"
+    }
+    
+    init(entity: NSManagedObject) {
+        content = entity.value(forKey: "content") as! String
+        createdAt = entity.value(forKey: "createdAt") as! Date
+        identity = entity.value(forKey: "identity") as! String
+    }
+    
+    func update(_ entity: NSManagedObject) {
+        entity.setValue(content, forKey: "content")
+        entity.setValue(createdAt, forKey: "createdAt")
+        entity.setValue(identity, forKey: "identity")
+        
+        do {
+            try entity.managedObjectContext?.save()
+        } catch {
+            print(error)
+        }
     }
 }

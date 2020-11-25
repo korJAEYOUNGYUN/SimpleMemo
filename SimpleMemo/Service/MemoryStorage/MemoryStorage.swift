@@ -10,12 +10,7 @@ import RxSwift
 
 class MemoryStorage: MemoStorageType {
     
-    private var list = [
-        Memo(content: "Hello, RxSwift", createdAt: Date().addingTimeInterval(-10)),
-        Memo(content: "Hello, there", createdAt: Date().addingTimeInterval(-20)),
-        Memo(content: "aaa", createdAt: Date().addingTimeInterval(-30)),
-        Memo(content: "doing something", createdAt: Date().addingTimeInterval(-40)),
-    ]
+    private var list = [Memo]()
     
     private lazy var sectionModel = MemoSectionModel(model: 0, items: list)
     
