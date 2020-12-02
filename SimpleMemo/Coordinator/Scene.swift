@@ -16,11 +16,11 @@ enum Scene {
 
 extension Scene {
     
-    func instantiate(from storyboard: String = "Main") -> UIViewController {
-        let storyboard = UIStoryboard(name: storyboard, bundle: nil)
-        
+    func instantiate() -> UIViewController {
         switch self {
         case .list(let viewModel):
+            let storyboard = UIStoryboard(name: "MemoListViewController", bundle: nil)
+
             guard let nav = storyboard.instantiateViewController(withIdentifier: "ListNav") as? UINavigationController else {
                 fatalError()
             }
@@ -33,6 +33,8 @@ extension Scene {
             return nav
             
         case .detail(let viewModel):
+            let storyboard = UIStoryboard(name: "MemoDetailViewController", bundle: nil)
+
             guard var detailVC = storyboard.instantiateViewController(withIdentifier: "DetailVC") as? MemoDetailViewController else {
                 fatalError()
             }
@@ -41,6 +43,8 @@ extension Scene {
             return detailVC
         
         case .compose(let viewModel):
+            let storyboard = UIStoryboard(name: "MemoComposeViewController", bundle: nil)
+
             guard let nav = storyboard.instantiateViewController(withIdentifier: "ComposeNav") as? UINavigationController else {
                 fatalError()
             }

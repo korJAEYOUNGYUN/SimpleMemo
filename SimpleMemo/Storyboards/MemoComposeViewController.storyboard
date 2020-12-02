@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--New Memo-->
+        <scene sceneID="SKX-X4-BbJ">
+            <objects>
+                <viewController id="OQn-Ju-jzH" customClass="MemoComposeViewController" customModule="SimpleMemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3EE-Ed-XhG">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="MDS-hr-e2g">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="bmy-dk-4Jn"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="bmy-dk-4Jn" firstAttribute="trailing" secondItem="MDS-hr-e2g" secondAttribute="trailing" id="3EB-PV-SbJ"/>
+                            <constraint firstItem="MDS-hr-e2g" firstAttribute="leading" secondItem="bmy-dk-4Jn" secondAttribute="leading" id="YVk-t6-CZ6"/>
+                            <constraint firstItem="bmy-dk-4Jn" firstAttribute="bottom" secondItem="MDS-hr-e2g" secondAttribute="bottom" id="dpZ-Jv-9j2"/>
+                            <constraint firstItem="MDS-hr-e2g" firstAttribute="top" secondItem="bmy-dk-4Jn" secondAttribute="top" id="kLm-Ze-Unr"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="New Memo" id="ylH-nX-QW6">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="pIk-zd-Bxd"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="17Y-oF-tQM"/>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="cancelButtonItem" destination="pIk-zd-Bxd" id="Uzd-pu-6ux"/>
+                        <outlet property="contentTextView" destination="MDS-hr-e2g" id="IHo-1w-pqd"/>
+                        <outlet property="saveButtonItem" destination="17Y-oF-tQM" id="vkW-1v-TXi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bkC-Oo-VKg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3843.4782608695655" y="-567.85714285714278"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="vCO-lg-qBH">
+            <objects>
+                <navigationController storyboardIdentifier="ComposeNav" automaticallyAdjustsScrollViewInsets="NO" id="4vz-ii-jbB" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Dcn-gd-ma9">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="OQn-Ju-jzH" kind="relationship" relationship="rootViewController" id="Of8-Q5-DfJ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HHP-gQ-3Uo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2931.8840579710145" y="-568.52678571428567"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
