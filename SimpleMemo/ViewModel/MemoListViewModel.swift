@@ -58,7 +58,7 @@ class MemoListViewModel: BaseViewModel {
     
     lazy var detailAction: Action<Memo, Void> = {
         return Action { memo in
-            let detailViewModel = MemoDetailViewModel(memo: memo, title: "memo detail", coordinator: self.coordinator, storage: self.storage)
+            let detailViewModel = MemoDetailViewModel(memo: memo, title: "Memo Detail", coordinator: self.coordinator, storage: self.storage)
             let detailScene = Scene.detail(detailViewModel)
             
             return self.coordinator.transition(to: detailScene, using: .push, animated: true).asObservable().map { _ in }
